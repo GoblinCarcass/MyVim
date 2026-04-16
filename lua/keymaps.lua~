@@ -6,8 +6,8 @@ vim.g.maplocalleader = " "
 -- Bread and butter
 map("i", "jk", "<Esc>")
 map("n", ";", ":")
-map("n", "<Leader>d", '"_d', { desc = "Delete without saving in the register in normal mode" })
-map("v", "<Leader>d", '"_d', { desc = "Delete without saving in the register in visual mode" })
+map("n", "<Leader>d", '"_d') -- Delete text without saving in the buffer
+map("v", "<Leader>d", '"_d')
 map("n", "<A-j>", ":m .+1<CR>>==", { desc = "Move line down" })
 map("n", "<A-k>", ":m .-2<CR>>==", { desc = "Move line up" })
 map("n", "<Leader>q", ":q<CR>", { desc = "Quit NeoVim" })
