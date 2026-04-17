@@ -36,3 +36,4 @@ vim.api.nvim_set_option("clipboard", "unnamedplus")
 -- Safety Net (Backups)
 o.backup = true
 o.undofile = true
+o.undodir = "~/.local/share/nvim/undo"
