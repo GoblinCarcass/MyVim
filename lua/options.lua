@@ -35,6 +35,6 @@ vim.api.nvim_set_option("clipboard", "unnamedplus")
 
 -- Safety Net (Backups)
 o.backup = true
-o.backupdir = "storage/backup"
+vim.cmd("let &backupdir = ($XDG_STATE_HOME ?? $HOME .. '/.local/state') .. '/nvim/backup'")
 o.undofile = true
-o.undodir = "storage/undo/"
+vim.cmd("let &undodir = ($XDG_STATE_HOME ?? $HOME .. '/.local/state') .. '/nvim/undodir'")

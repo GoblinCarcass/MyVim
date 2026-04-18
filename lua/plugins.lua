@@ -17,6 +17,7 @@ vim.pack.add({
 	gh("nvim-tree/nvim-web-devicons"),
 	gh("j-morano/buffer_manager.nvim"),
 	gh("folke/which-key.nvim"),
+  gh("3rd/image.nvim"),
 
 	gh("nvim-mini/mini.nvim"),
 	gh("nvim-neo-tree/neo-tree.nvim"),
@@ -39,6 +40,9 @@ vim.pack.add({
 	gh("nvimtools/none-ls.nvim"),
 	gh("nvimtools/none-ls-extras.nvim"),
 })
+-- Image Render
+require("image").setup()
+
 -- Render Markdown
 require("render-markdown").setup({
 	completions = { lsp = { enabled = true } },
