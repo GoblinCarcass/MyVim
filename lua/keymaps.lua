@@ -31,16 +31,16 @@ map("n", "<Leader>tv", ":vsp<CR> :terminal<CR> a", { desc = "Split window vertic
 local builtin = require("telescope.builtin")
 map("n", "<Leader>ff", builtin.find_files, { desc = "Telescope - Find files in the current directory!" })
 map(
-	"n",
-	"<Leader>fg",
-	builtin.live_grep,
-	{ desc = "Telescope - Live search for a keyword in your current working directory" }
+  "n",
+  "<Leader>fg",
+  builtin.live_grep,
+  { desc = "Telescope - Live search for a keyword in your current working directory" }
 )
 map(
-	"n",
-	"<Leader>fd",
-	builtin.current_buffer_fuzzy_find,
-	{ desc = "Telescope - Live search for a keyword in a current buffer" }
+  "n",
+  "<Leader>fd",
+  builtin.current_buffer_fuzzy_find,
+  { desc = "Telescope - Live search for a keyword in a current buffer" }
 )
 map("n", "<Leader>fz", builtin.git_files, { desc = "Telescope - Fuzzy find through git commits" })
 
@@ -59,10 +59,10 @@ map("n", "<C-n>", ":Neotree show filesystem toggle right reveal<CR>", { desc = "
 -- Lsp
 map("n", "K", vim.lsp.buf.hover, { noremap = true, desc = "Display the hover information of a token under the cursor" })
 map(
-	"n",
-	"<Leader>rn",
-	vim.lsp.buf.rename,
-	{ desc = "Rename all references to the symbol under the cursor e.g. variable name." }
+  "n",
+  "<Leader>rn",
+  vim.lsp.buf.rename,
+  { desc = "Rename all references to the symbol under the cursor e.g. variable name." }
 )
 map("n", "<Leader>gd", vim.lsp.buf.definition, { desc = "Display the hover information of a token under the cursor" })
 map("n", "<Leader>ca", vim.lsp.buf.code_action, { desc = "Perform a code action on a token under the cursor" })
@@ -77,12 +77,16 @@ map("n", "#", "#zz", { noremap = true })
 map("n", "g*", "g*zz", { noremap = true })
 map("n", "g#", "g#zz", { noremap = true })
 
+-- WhichKey
+map({ "n", "v" }, "<leader>?", function() require("which-key").show({ global = false }) end,
+  { desc = "Buffer Local Keymaps (which-key)" })
+
 -- Flash
 map({ "n", "x", "o" }, "s", function()
-	require("flash").jump()
+  require("flash").jump()
 end, { desc = "Flash" })
 map({ "n", "x", "o" }, "S", function()
-	require("flash").treesitter()
+  require("flash").treesitter()
 end, { desc = "Flash Treesitter" })
 
 --[[ Left the shortcuts from Flash for reference
@@ -95,17 +99,17 @@ end, { desc = "Flash Treesitter" })
 
 -- Mini.splitjoin
 require("mini.splitjoin").setup({
-	mappings = {
-		toggle = "<leader>m",
-		split = "<Leader>s",
-		join = "<Leader>j",
-	},
+  mappings = {
+    toggle = "<leader>m",
+    split = "<Leader>s",
+    join = "<Leader>j",
+  },
 })
 
 -- Mini.completion
 require("mini.completion").setup({
-	mappings = {
-		scroll_down = "<C-Down>",
-		scroll_up = "<C-Up>",
-	},
+  mappings = {
+    scroll_down = "<C-Down>",
+    scroll_up = "<C-Up>",
+  },
 })

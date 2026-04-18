@@ -16,6 +16,7 @@ vim.pack.add({
 	gh("MunifTanjim/nui.nvim"),
 	gh("nvim-tree/nvim-web-devicons"),
 	gh("j-morano/buffer_manager.nvim"),
+	gh("folke/which-key.nvim"),
 
 	gh("nvim-mini/mini.nvim"),
 	gh("nvim-neo-tree/neo-tree.nvim"),
@@ -23,6 +24,7 @@ vim.pack.add({
 	gh("folke/flash.nvim"),
 	gh("abecodes/tabout.nvim"),
 	gh("numToStr/Comment.nvim"),
+	gh("MeanderingProgrammer/render-markdown.nvim"),
 
 	{ src = gh("nvim-treesitter/nvim-treesitter"), lazy = false, build = ":TSUpdate" },
 	gh("nvim-telescope/telescope.nvim"),
@@ -37,6 +39,11 @@ vim.pack.add({
 	gh("nvimtools/none-ls.nvim"),
 	gh("nvimtools/none-ls-extras.nvim"),
 })
+-- Render Markdown
+require("render-markdown").setup({
+	completions = { lsp = { enabled = true } },
+})
+
 -- Tabout
 require("tabout").setup()
 
