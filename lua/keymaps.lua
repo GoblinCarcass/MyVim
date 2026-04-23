@@ -12,20 +12,20 @@ map("n", "<A-j>", ":m .+1<CR>>==", { desc = "Move line down" })
 map("n", "<A-k>", ":m .-2<CR>>==", { desc = "Move line up" })
 map("n", "<Leader>q", ":q<CR>", { desc = "Quit NeoVim" })
 map("n", "<Leader>w", ":w<CR>", { desc = "Write to file" })
-map("n", "<Leader>wq", ":w<CR>:q<CR>", { desc = "Write, then Quit" }) -- Lmao that command gives me cancer, I love it
+map("n", "<Leader>wq", ":wq<CR>", { desc = "Write, then Quit" }) -- Lmao that command gives me cancer, I love it
 map("n", "<Leader>Q", ":q!<CR>", { desc = "Get me the fuck out of here!" })
 map("n", "<leader>v", "vg_", { noremap = true, desc = "Select to last non-blank character" })
 map("n", "<leader>sc", ":set spell!<CR>", { desc = "Toggle spellcheck" })
 map("n", "<leader>su", "z=", { desc = "Spellcheck word autosuggestion" })
 map({ "n", "v" }, "gh", "_", { noremap = true, desc = "Go to start of line" })
 map({ "n", "v" }, "gl", "$", { noremap = true, desc = "Go to end of line" })
-map("n", "<Leader>tt", ":terminal<CR> a", { desc = "Open terminal" })
 
--- Window Splitting
+-- Window and Terminal Splitting
 map("n", "<Leader>sh", ":sp<CR>", { desc = "Split window horizontally" })
 map("n", "<Leader>sv", ":vsp<CR>", { desc = "Split window vertically" })
-map("n", "<Leader>th", ":sp<CR> :terminal<CR> a", { desc = "Split window horizontally with a terminal" })
-map("n", "<Leader>tv", ":vsp<CR> :terminal<CR> a", { desc = "Split window vertically with a terminal" })
+map("n", "<Leader>tt", ":ToggleTerm size=100<CR>", { desc = "Toggle Terminal"})
+map("n", "<Leader>th", ":ToggleTerm direction=horizontal name=workspace<CR>", { desc = "Split terminal horizontally"})
+map("n", "<Leader>tv", ":ToggleTerm size=30 direction=vertical name=workspace<CR>", { desc = "Split terminal vertically"})
 
 -- Telescope
 local builtin = require("telescope.builtin")
@@ -82,7 +82,7 @@ map({ "n", "v" }, "<leader>?", function() require("which-key").show({ global = f
   { desc = "Buffer Local Keymaps (which-key)" })
 
 -- Flash
-map({ "n", "x", "o" }, "s", function()
+map({ "n", "x", "o" }, "ss", function()
   require("flash").jump()
 end, { desc = "Flash" })
 map({ "n", "x", "o" }, "S", function()

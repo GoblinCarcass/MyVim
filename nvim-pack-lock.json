@@ -48,6 +48,10 @@
       "rev": "ba47d4b4c5ec308718641ba7402c143836f35aa9",
       "src": "https://github.com/EdenEast/nightfox.nvim"
     },
+    "nnn.nvim": {
+      "rev": "efe690293eee87558f034a83ed96157e52639cdb",
+      "src": "https://github.com/luukvbaal/nnn.nvim"
+    },
     "none-ls-extras.nvim": {
       "rev": "70ec8815cdf186223af04cc5a15bc8bdface0ef0",
       "src": "https://github.com/nvimtools/none-ls-extras.nvim"
@@ -103,6 +107,10 @@
     "telescope.nvim": {
       "rev": "3ab376cfae65b921dda454df5967f8df673effc6",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "toggleterm.nvim": {
+      "rev": "9a88eae817ef395952e08650b3283726786fb5fb",
+      "src": "https://github.com/akinsho/toggleterm.nvim"
     },
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",

@@ -17,7 +17,8 @@ vim.pack.add({
 	gh("nvim-tree/nvim-web-devicons"),
 	gh("j-morano/buffer_manager.nvim"),
 	gh("folke/which-key.nvim"),
-  gh("3rd/image.nvim"),
+	gh("3rd/image.nvim"),
+	gh("akinsho/toggleterm.nvim"),
 
 	gh("nvim-mini/mini.nvim"),
 	gh("nvim-neo-tree/neo-tree.nvim"),
@@ -39,6 +40,10 @@ vim.pack.add({
 
 	gh("nvimtools/none-ls.nvim"),
 	gh("nvimtools/none-ls-extras.nvim"),
+})
+-- Toggleterm
+require("toggleterm").setup({
+  hide_numbers = true,
 })
 -- Image Render
 require("image").setup()
