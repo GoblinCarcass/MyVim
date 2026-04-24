@@ -113,3 +113,6 @@ require("mini.completion").setup({
     scroll_up = "<C-Up>",
   },
 })
+
+-- Wrapping
+map("n", "<leader>wt", function() require('wrapping').toggle_wrap_mode() end, { desc = "Toggle wrap mode"})

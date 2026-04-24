@@ -19,6 +19,7 @@ vim.pack.add({
 	gh("folke/which-key.nvim"),
 	gh("3rd/image.nvim"),
 	gh("akinsho/toggleterm.nvim"),
+  gh("andrewferrier/wrapping.nvim"),
 
 	gh("nvim-mini/mini.nvim"),
 	gh("nvim-neo-tree/neo-tree.nvim"),
@@ -41,6 +42,11 @@ vim.pack.add({
 	gh("nvimtools/none-ls.nvim"),
 	gh("nvimtools/none-ls-extras.nvim"),
 })
+-- Wrapping
+require("wrapping").setup({
+  create_keymaps = false,
+})
+
 -- Toggleterm
 require("toggleterm").setup({
   hide_numbers = true,
