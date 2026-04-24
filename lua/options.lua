@@ -9,12 +9,14 @@ o.sidescrolloff = 30
 o.termguicolors = true
 o.wrap = false
 o.cursorline = true
-vim.cmd(':set cmdheight=0')
+vim.cmd(":set cmdheight=0")
 vim.opt.splitbelow = true -- Prio splitting new windows below
 vim.opt.splitright = true -- Prio splitting new windows to the right
 o.inccommand = "split"
 
 -- Tabs
+vim.opt.textwidth = 80
+o.colorcolumn = "80"
 o.shiftwidth = 2
 o.tabstop = 2
 o.softtabstop = 2
