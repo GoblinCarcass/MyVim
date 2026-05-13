@@ -19,8 +19,10 @@ vim.pack.add({
 	gh("folke/which-key.nvim"),
 	gh("3rd/image.nvim"),
 	gh("akinsho/toggleterm.nvim"),
-  gh("andrewferrier/wrapping.nvim"),
-
+	gh("andrewferrier/wrapping.nvim"),
+	gh("Mathijs-Bakker/godotdev.nvim"),
+	gh("mfussenegger/nvim-dap"),
+	gh("rcarriga/nvim-dap-ui"),
 	gh("nvim-mini/mini.nvim"),
 	gh("nvim-neo-tree/neo-tree.nvim"),
 	gh("stevearc/oil.nvim"),
@@ -44,12 +46,12 @@ vim.pack.add({
 })
 -- Wrapping
 require("wrapping").setup({
-  create_keymaps = false,
+	create_keymaps = false,
 })
 
 -- Toggleterm
 require("toggleterm").setup({
-  hide_numbers = true,
+	hide_numbers = true,
 })
 -- Image Render
 require("image").setup()

@@ -82,7 +82,7 @@ map({ "n", "v" }, "<leader>?", function() require("which-key").show({ global = f
   { desc = "Buffer Local Keymaps (which-key)" })
 
 -- Flash
-map({ "n", "x", "o" }, "ss", function()
+map({ "n", "x", "o" }, "<Leader>s", function()
   require("flash").jump()
 end, { desc = "Flash" })
 map({ "n", "x", "o" }, "S", function()
@@ -101,8 +101,6 @@ end, { desc = "Flash Treesitter" })
 require("mini.splitjoin").setup({
   mappings = {
     toggle = "<leader>m",
-    split = "<Leader>s",
-    join = "<Leader>j",
   },
 })
 

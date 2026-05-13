@@ -4,6 +4,7 @@ vim.api.nvim_create_autocmd("FileType", {
 	pattern = "markdown",
 	callback = function()
 		vim.o.wrap = true
+    vim.o.colorcolumn = "0"
 	end,
 })
 
